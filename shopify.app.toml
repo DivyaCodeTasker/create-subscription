@@ -1,0 +1,27 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "create-subscription"
+client_id = "52729dd82cabe6d1dc0b218e40e31369"
+application_url = "https://e5ef-2401-4900-1cb5-f1e4-d86f-a81-eeca-3fc9.ngrok-free.app"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://e5ef-2401-4900-1cb5-f1e4-d86f-a81-eeca-3fc9.ngrok-free.app/auth/callback",
+  "https://e5ef-2401-4900-1cb5-f1e4-d86f-a81-eeca-3fc9.ngrok-free.app/auth/shopify/callback",
+  "https://e5ef-2401-4900-1cb5-f1e4-d86f-a81-eeca-3fc9.ngrok-free.app/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-10"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "divyatestapp.myshopify.com"
